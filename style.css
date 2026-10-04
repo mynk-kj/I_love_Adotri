@@ -1,0 +1,1489 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffe4ec,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #e8dcff,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #f8f0ff
+        );
+
+    color: #4b3040;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   PAGE SYSTEM
+========================================== */
+
+.page {
+    display: none;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    animation: pageAppear 0.7s ease;
+}
+
+
+.page.active {
+    display: flex;
+}
+
+
+@keyframes pageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    color: #8d3d61;
+
+    margin-bottom: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+h2 {
+    color: #8d3d61;
+
+    margin-bottom: 12px;
+
+    font-size: 1.6rem;
+}
+
+
+p {
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+    color: #705263;
+}
+
+
+/* ==========================================
+   GENERAL BUTTONS
+========================================== */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* ==========================================
+   OPENING PAGE
+========================================== */
+
+#openingPage h1 {
+    max-width: 800px;
+
+    font-size: clamp(2.2rem, 6vw, 4rem);
+}
+
+
+#openingPage p {
+    margin-bottom: 28px;
+
+    font-size: 1.25rem;
+}
+
+
+#openingYesBtn {
+    padding: 14px 34px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff7198,
+            #e84d7c
+        );
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 25px rgba(232, 77, 124, 0.25);
+}
+
+
+#openingYesBtn:hover {
+    box-shadow:
+        0 15px 35px rgba(232, 77, 124, 0.35);
+}
+
+
+/* ==========================================
+   STEP 1
+========================================== */
+
+#step1 h1 {
+    margin-bottom: 30px;
+}
+
+
+#step1 > div {
+    display: flex;
+
+    gap: 18px;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+#yesBtn,
+#noBtn {
+    padding: 13px 28px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+}
+
+
+#yesBtn {
+    background: #ff668f;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(255, 102, 143, 0.25);
+}
+
+
+#noBtn {
+    background: white;
+
+    color: #a24a69;
+
+    border: 1px solid #f0c4d2;
+
+    box-shadow:
+        0 6px 18px rgba(120, 70, 90, 0.08);
+}
+
+
+/* ==========================================
+   STEP 2 — OUR STORY
+========================================== */
+
+#step2 p {
+    max-width: 600px;
+
+    margin-bottom: 30px;
+
+    font-size: 1.2rem;
+}
+
+
+#startStoryBtn {
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: #ff668f;
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 25px rgba(255, 102, 143, 0.25);
+}
+
+
+/* ==========================================
+   STEP 3 — MEMORY SECTION
+========================================== */
+
+#step3 {
+    padding-top: 50px;
+
+    padding-bottom: 50px;
+}
+
+
+#step3 > h1 {
+    margin-bottom: 28px;
+}
+
+
+#memoryCard {
+    position: relative;
+
+    width: min(650px, 92vw);
+
+    padding: 35px 30px 30px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(117, 65, 90, 0.12);
+
+    backdrop-filter: blur(12px);
+
+    animation: cardFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+.memory-heart {
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+}
+
+
+#memoryImage {
+    display: none;
+
+    width: 100%;
+
+    max-height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin: 5px auto 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 30px rgba(80, 40, 60, 0.14);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#memoryImage:hover {
+    transform: scale(1.015);
+
+    box-shadow:
+        0 18px 35px rgba(80, 40, 60, 0.18);
+}
+
+
+#memoryTitle {
+    margin-bottom: 8px;
+}
+
+
+#memoryDate {
+    font-size: 0.9rem;
+
+    color: #b16a84;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+#memoryText {
+    max-width: 520px;
+
+    margin: 0 auto 25px;
+}
+
+
+#memoryNextBtn {
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    background: #ff668f;
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(255, 102, 143, 0.22);
+}
+
+
+/* ==========================================
+   MEMORY IMAGE POPUP
+========================================== */
+
+#imageModal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(35, 15, 25, 0.82);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9999;
+}
+
+
+#imageModal.show {
+    display: flex;
+
+    animation: modalFade 0.25s ease;
+}
+
+
+.imageModalContent {
+    position: relative;
+
+    max-width: 90vw;
+
+    max-height: 90vh;
+}
+
+
+#largeMemoryImage {
+    display: block;
+
+    max-width: 90vw;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+#closeImageModal {
+    position: absolute;
+
+    top: -15px;
+
+    right: -15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #8d3d61;
+
+    font-size: 1.5rem;
+
+    z-index: 2;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==========================================
+   STEP 4 — LOVE REASONS
+========================================== */
+
+.loveIntro {
+    max-width: 600px;
+
+    margin-bottom: 25px;
+}
+
+
+#loveHearts {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    width: min(500px, 90vw);
+
+    margin: 15px auto 20px;
+}
+
+
+.loveHeart {
+    width: 90px;
+
+    height: 90px;
+
+    justify-self: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    font-size: 2.7rem;
+
+    box-shadow:
+        0 10px 25px rgba(150, 70, 100, 0.12);
+
+    animation:
+        heartPulse 2.5s ease-in-out infinite;
+}
+
+
+.loveHeart:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+
+.loveHeart:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+.loveHeart:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+
+.loveHeart:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+
+.loveHeart:nth-child(6) {
+    animation-delay: 1s;
+}
+
+
+.loveHeart:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+
+.loveHeart:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+.loveHeart:hover {
+    background: #fff0f5;
+
+    box-shadow:
+        0 15px 30px rgba(150, 70, 100, 0.2);
+}
+
+
+.loveHint {
+    font-size: 0.9rem;
+
+    color: #ad7188;
+
+    margin-bottom: 22px;
+}
+
+
+#loveNextBtn {
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    background: #ff668f;
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(255, 102, 143, 0.22);
+}
+
+
+/* ==========================================
+   LOVE REASON POPUP
+========================================== */
+
+#loveModal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(45, 20, 32, 0.55);
+
+    backdrop-filter: blur(7px);
+
+    z-index: 10000;
+}
+
+
+#loveModal.show {
+    display: flex;
+
+    animation: modalFade 0.25s ease;
+}
+
+
+#loveModalContent {
+    position: relative;
+
+    width: min(520px, 92vw);
+
+    padding: 45px 35px 35px;
+
+    background: white;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(60, 20, 40, 0.2);
+}
+
+
+#closeLoveModal {
+    position: absolute;
+
+    top: 14px;
+
+    right: 17px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #fff0f4;
+
+    color: #8d3d61;
+
+    font-size: 1.4rem;
+}
+
+
+#loveModalHeart {
+    font-size: 2.5rem;
+
+    margin-bottom: 12px;
+}
+
+
+#loveModalText {
+    margin-top: 10px;
+}
+
+
+/* ==========================================
+   STEP 5 — PHOTO SCRAPBOOK
+========================================== */
+
+.galleryIntro {
+    margin-bottom: 30px;
+}
+
+
+#photoGallery {
+    width: min(1000px, 94vw);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+
+.photoCard {
+    padding: 12px 12px 18px;
+
+    background: #fff;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 12px 28px rgba(80, 40, 60, 0.13);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.photoCard:nth-child(odd) {
+    transform: rotate(-1.5deg);
+}
+
+
+.photoCard:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+
+.photoCard:hover {
+    transform:
+        translateY(-8px)
+        rotate(0deg);
+
+    box-shadow:
+        0 20px 35px rgba(80, 40, 60, 0.2);
+}
+
+
+.photoCard img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    margin-bottom: 14px;
+}
+
+
+.photoCard p {
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 0.9rem;
+
+    line-height: 1.4;
+
+    color: #735264;
+
+    padding: 0 4px;
+}
+
+
+#galleryNextBtn {
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    background: #ff668f;
+
+    color: white;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(255, 102, 143, 0.22);
+}
+
+
+/* ==========================================
+   PHOTO POPUP
+========================================== */
+
+#photoModal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(25, 12, 20, 0.85);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 9999;
+}
+
+
+#photoModal.show {
+    display: flex;
+
+    animation: modalFade 0.25s ease;
+}
+
+
+#photoModalContent {
+    position: relative;
+
+    width: min(850px, 92vw);
+
+    max-height: 92vh;
+
+    text-align: center;
+}
+
+
+#largePhoto {
+    max-width: 100%;
+
+    max-height: 78vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+
+#photoCaption {
+    color: white;
+
+    margin-top: 15px;
+
+    font-size: 1rem;
+}
+
+
+#closePhotoModal {
+    position: absolute;
+
+    top: -15px;
+
+    right: -15px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #8d3d61;
+
+    font-size: 1.5rem;
+
+    z-index: 2;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes modalFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* ==========================================
+   STEP 6 — CATCH 10 HEARTS
+========================================== */
+
+#step6 h1 {
+    margin-bottom: 10px;
+}
+
+
+#gameInstruction {
+    margin-bottom: 20px;
+}
+
+
+#gameArea {
+    position: relative;
+
+    width: min(800px, 92vw);
+
+    height: min(500px, 60vh);
+
+    min-height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border: 2px solid
+        rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        inset 0 0 40px
+        rgba(255, 150, 180, 0.08),
+        0 20px 50px
+        rgba(100, 50, 80, 0.1);
+
+    backdrop-filter: blur(8px);
+}
+
+
+#gameArea::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: 15%;
+
+    left: 10%;
+
+    font-size: 4rem;
+
+    color: rgba(255, 105, 145, 0.08);
+
+    pointer-events: none;
+}
+
+
+#gameArea::after {
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 10%;
+
+    right: 10%;
+
+    font-size: 5rem;
+
+    color: rgba(180, 110, 200, 0.08);
+
+    pointer-events: none;
+}
+
+
+#catchHeart {
+    position: absolute;
+
+    left: 50px;
+
+    top: 50px;
+
+    width: 65px;
+
+    height: 65px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    font-size: 2.2rem;
+
+    box-shadow:
+        0 10px 25px
+        rgba(255, 75, 120, 0.2);
+
+    transition:
+        left 0.25s ease,
+        top 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+#catchHeart:hover {
+    transform: scale(1.15);
+}
+
+
+#heartCounter {
+    margin-top: 20px;
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    color: #9b4668;
+}
+
+
+/* ==========================================
+   GAME COMPLETE
+========================================== */
+
+#gameComplete h1 {
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+
+    animation:
+        celebrationPulse 1.5s ease-in-out infinite;
+}
+
+
+@keyframes celebrationPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+}
+
+
+#gameComplete p {
+    margin-bottom: 28px;
+}
+
+
+#gameNextBtn {
+    padding: 13px 30px;
+
+    border-radius: 50px;
+
+    background: #ff668f;
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   FINAL QUESTION
+========================================== */
+
+#finalQuestion h1 {
+    max-width: 750px;
+
+    font-size: clamp(2.3rem, 6vw, 4rem);
+}
+
+
+#finalQuestion p {
+    margin-bottom: 30px;
+}
+
+
+#finalButtons {
+    display: flex;
+
+    gap: 18px;
+
+    justify-content: center;
+}
+
+
+#finalYesBtn,
+#finalNoBtn {
+    padding: 13px 30px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+}
+
+
+#finalYesBtn {
+    background: #ff668f;
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(255, 102, 143, 0.25);
+}
+
+
+#finalNoBtn {
+    background: white;
+
+    color: #9b4668;
+
+    border: 1px solid #efc5d3;
+}
+
+
+/* ==========================================
+   HEART EXPLOSION
+========================================== */
+
+#heartExplosion {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 20000;
+}
+
+
+.explosionHeart {
+    position: absolute;
+
+    transform:
+        translate(-50%, -50%);
+
+    animation:
+        explodeHeart 1.5s ease-out forwards;
+}
+
+
+@keyframes explodeHeart {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.5);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(1.3);
+    }
+
+}
+
+
+/* ==========================================
+   FINAL LOVE LETTER
+========================================== */
+
+#finalLetter {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fff5f8,
+            #f7eafa
+        );
+}
+
+
+#finalLetter::before,
+#finalLetter::after {
+    content: "❤";
+
+    position: absolute;
+
+    color: rgba(255, 105, 145, 0.08);
+
+    pointer-events: none;
+}
+
+
+#finalLetter::before {
+    font-size: 15rem;
+
+    left: -50px;
+
+    top: -40px;
+
+    transform: rotate(-15deg);
+}
+
+
+#finalLetter::after {
+    font-size: 12rem;
+
+    right: -30px;
+
+    bottom: -20px;
+
+    transform: rotate(15deg);
+}
+
+
+#finalLetterCard {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(750px, 92vw);
+
+    padding: 55px 45px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(90, 40, 70, 0.14);
+
+    backdrop-filter: blur(12px);
+
+    animation:
+        letterAppear 1s ease;
+}
+
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+.finalHeart {
+    font-size: 3.5rem;
+
+    margin-bottom: 18px;
+
+    animation:
+        heartPulse 2s ease-in-out infinite;
+}
+
+
+#finalLetterCard h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+
+    margin-bottom: 25px;
+}
+
+
+#finalMessage {
+    white-space: pre-line;
+
+    max-width: 620px;
+
+    margin: 0 auto 30px;
+
+    font-size: 1.08rem;
+
+    line-height: 1.9;
+}
+
+
+.finalSignature {
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 1.15rem;
+
+    color: #9b4668;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding:
+            35px 15px;
+    }
+
+
+    h1 {
+        line-height: 1.15;
+    }
+
+
+    #step1 > div {
+        gap: 12px;
+    }
+
+
+    #yesBtn,
+    #noBtn {
+        padding:
+            12px 22px;
+    }
+
+
+    #memoryCard {
+        padding:
+            28px 20px 25px;
+    }
+
+
+    #memoryImage {
+        max-height: 300px;
+    }
+
+
+    #loveHearts {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+
+        width: min(330px, 90vw);
+    }
+
+
+    .loveHeart {
+        width: 82px;
+
+        height: 82px;
+
+        font-size: 2.4rem;
+    }
+
+
+    #photoGallery {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+    }
+
+
+    .photoCard {
+        padding:
+            8px 8px 14px;
+    }
+
+
+    .photoCard p {
+        font-size: 0.78rem;
+    }
+
+
+    #gameArea {
+        height: 55vh;
+
+        min-height: 320px;
+    }
+
+
+    #catchHeart {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 2rem;
+    }
+
+
+    #finalButtons {
+        flex-direction: column;
+
+        width: 180px;
+    }
+
+
+    #finalYesBtn,
+    #finalNoBtn {
+        width: 100%;
+    }
+
+
+    #finalLetterCard {
+        padding:
+            40px 25px;
+    }
+
+
+    #finalMessage {
+        font-size: 1rem;
+
+        line-height: 1.75;
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL PHONES
+========================================== */
+
+@media (max-width: 400px) {
+
+    #photoGallery {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .photoCard {
+        width: min(300px, 85vw);
+
+        margin: 0 auto;
+    }
+
+
+    #loveHearts {
+        gap: 12px;
+    }
+
+
+    .loveHeart {
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 2.2rem;
+    }
+
+}

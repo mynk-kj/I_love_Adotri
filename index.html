@@ -1,0 +1,441 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         MUSIC
+    =========================================== -->
+
+    <audio id="song1" src="music/song1.mp3" loop></audio>
+
+    <audio id="song2" src="music/song2.mp3" loop></audio>
+
+    <audio id="song3" src="music/song3.mp3" loop></audio>
+
+    <audio id="song4" src="music/song4.mp3"></audio>
+
+
+
+    <!-- ==========================================
+         OPENING PAGE
+    =========================================== -->
+
+    <section id="openingPage" class="page active">
+
+        <h1>
+            Hey Aditri, I've Made Something For You.
+        </h1>
+
+        <p>
+            Wanna Have A Look?
+        </p>
+
+        <button id="openingYesBtn">
+            yes ❤️
+        </button>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STEP 1 — DO YOU LOVE ME?
+    =========================================== -->
+
+    <section id="step1" class="page">
+
+        <h1>
+            Do you love me? (try hitting the no button hehe)
+        </h1>
+
+        <div>
+
+            <button id="yesBtn">
+                YES ❤️
+            </button>
+
+            <button id="noBtn">
+                NO 💔
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STEP 2 — OUR STORY
+    =========================================== -->
+
+    <section id="step2" class="page">
+
+        <h1>
+            Do You Remember Where We started?
+        </h1>
+
+        <p>
+            Every beautiful story has a beginning...
+        </p>
+
+        <button id="startStoryBtn">
+            Let's go 🥸
+        </button>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STEP 3 — OUR MEMORIES
+    =========================================== -->
+
+    <section id="step3" class="page">
+
+        <h1>
+            Our Little Story
+        </h1>
+
+
+        <div id="memoryCard">
+
+            <div class="memory-heart">
+                💌
+            </div>
+
+
+            <img
+                id="memoryImage"
+                src=""
+                alt="Our memory"
+            >
+
+
+            <h2 id="memoryTitle">
+                When We First Started Talking
+            </h2>
+
+
+            <p id="memoryDate">
+                YOUR DATE HERE
+            </p>
+
+
+            <p id="memoryText">
+                YOUR MEMORY MESSAGE HERE
+            </p>
+
+
+            <button id="memoryNextBtn">
+                Next ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STEP 4 — THINGS I LOVE ABOUT YOU
+    =========================================== -->
+
+    <section id="step4" class="page">
+
+        <h1>
+            Things I Love About You
+        </h1>
+
+        <p class="loveIntro">
+            There are probably a million things I could write here...
+        </p>
+
+
+        <div id="loveHearts">
+
+            <button class="loveHeart" data-index="0">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="1">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="2">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="3">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="4">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="5">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="6">
+                ❤️
+            </button>
+
+            <button class="loveHeart" data-index="7">
+                ❤️
+            </button>
+
+        </div>
+
+
+        <p class="loveHint">
+            Click on them ❤️
+        </p>
+
+
+        <button id="loveNextBtn">
+            Next ❤️
+        </button>
+
+
+        <!-- LOVE REASON POPUP -->
+
+        <div id="loveModal">
+
+            <div id="loveModalContent">
+
+                <button id="closeLoveModal">
+                    ×
+                </button>
+
+                <div id="loveModalHeart">
+                    ❤️
+                </div>
+
+                <h2 id="loveModalTitle">
+                    Something I Love About You
+                </h2>
+
+                <p id="loveModalText">
+                    YOUR REASON HERE
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         STEP 5 — PHOTO SCRAPBOOK
+    =========================================== -->
+
+    <section id="step5" class="page">
+
+        <h1>
+            Your Little Scrapbook I've Made
+        </h1>
+
+        <p class="galleryIntro">
+            I just love my girlfriend 
+        </p>
+
+
+        <div id="photoGallery">
+
+            <!-- Photos are added by JavaScript -->
+
+        </div>
+
+
+        <button id="galleryNextBtn">
+            Next ❤️
+        </button>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         PHOTO POPUP
+    =========================================== -->
+
+    <div id="photoModal">
+
+        <div id="photoModalContent">
+
+            <button id="closePhotoModal">
+                ×
+            </button>
+
+            <img
+                id="largePhoto"
+                src=""
+                alt="Our photo"
+            >
+
+            <p id="photoCaption">
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         STEP 6 — CATCH 10 HEARTS
+    =========================================== -->
+
+    <section id="step6" class="page">
+
+        <h1>
+            Catch 10 Hearts ❤️
+        </h1>
+
+        <p id="gameInstruction">
+            Catch all 10 hearts!
+        </p>
+
+
+        <div id="gameArea">
+
+            <button id="catchHeart">
+                ❤️
+            </button>
+
+        </div>
+
+
+        <p id="heartCounter">
+            0 / 10
+        </p>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         GAME COMPLETE
+    =========================================== -->
+
+    <section id="gameComplete" class="page">
+
+        <h1>
+            You caught them all! 
+        </h1>
+
+        <p>
+            Yayyyyyy!!!
+        </p>
+
+        <button id="gameNextBtn">
+            Next ❤️
+        </button>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FINAL QUESTION
+    =========================================== -->
+
+    <section id="finalQuestion" class="page">
+
+        <h1>
+            Would you choose me again? ❤️
+        </h1>
+
+        <p>
+            Even if you knew everything that was coming?
+        </p>
+
+
+        <div id="finalButtons">
+
+            <button id="finalYesBtn">
+                YES ❤️
+            </button>
+
+            <button id="finalNoBtn">
+                NO 💔
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         HEART EXPLOSION
+    =========================================== -->
+
+    <div id="heartExplosion"></div>
+
+
+
+    <!-- ==========================================
+         FINAL LOVE LETTER
+    =========================================== -->
+
+    <section id="finalLetter" class="page">
+
+        <div id="finalLetterCard">
+
+            <div class="finalHeart">
+                ❤️
+            </div>
+
+            <h1>
+                So, how was this surprise?
+            </h1>
+
+            <p id="finalMessage">
+                Honestly, I don't have anything to say, I feel out of words right now even though I have a million
+                emotions racing in my mind rn. I just hope you liked this little thing I made for you....I know 
+                took me some while, but here it is for you. Just listen to the song meanwhile, I took hours deciding 
+                the songs itself 😭. I just love you Adotri, to the moon and back. I know we have had our difficult 
+                times, and there are a lot of them yet to come, but I know we'll manage all along. I love you <3. 
+            </p>
+
+            <div class="finalSignature">
+                — YOURS LOVINGLY, Mayank ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+```
